@@ -1,0 +1,33 @@
+.main{
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    align-items: center;
+    gap: 1em;
+}
+.main > form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.main > form > div:nth-child(1) input{
+    padding: 5px;
+    font-size: 1.5em;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid black;
+}
+
+.main > form button{
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: blue;
+    color: white;
+}
+.main > div:nth-child(2) .noDataContainer{
+    margin-top: 2em;
+    font-size: 5em;
+    font-weight: bold;
+}

@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0px 20px gray;
+    width: 50rem;
+    height: 20rem;
+    margin: auto;
+    padding: 2em;
+    justify-content: space-between;
+    gap: 10px;
+    border-radius: 10px;
+}
+.container > div:nth-child(1){
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+.container > div:nth-child(2){
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-weight: bold;
+}
+.container > div:nth-child(2) >div:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.container > div:nth-child(2) div > span{
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.container > div:nth-child(3){
+    display: flex;
+    /* justify-content: space-evenly; */
+    flex-direction: column;
+    align-items: center;
+}
