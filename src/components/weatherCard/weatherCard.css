@@ -1,8 +1,9 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
-    box-shadow: 5px 0px 20px gray;
-    width: 50rem;
+    width: 20rem;
+    background: linear-gradient(45deg, #637794, #1f2c3c);
+    background-position: center;
     height: 20rem;
     margin: auto;
     padding: 2em;
@@ -10,33 +11,142 @@
     gap: 10px;
     border-radius: 10px;
 }
-.container > div:nth-child(1){
+
+.container>div:nth-child(1) {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
+
+.container>div:nth-child(1)>div:nth-child(1) {
     display: flex;
     gap: 10px;
-    justify-content: center;
-    border-bottom: 1px solid black;
+    color: white;
+    padding: 5px 10px 5px 0;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0);
+    border-right: 2px solid white;
+    align-items: center;
 }
-.container > div:nth-child(2){
+
+.container>div:nth-child(1)>div:nth-child(2){
+    display: flex;
+    gap: 0px;
+    padding: 0;
+}
+.container>div:nth-child(1)>div:nth-child(2) >p {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 5px 10px 5px 0;
+    color: white;
+    font-weight: bold;
+}
+
+
+
+.container>div:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+.container>div:nth-child(2) .weatherIconContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.container>div:nth-child(2) .weatherIconContainer .iconImg {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+}
+
+.container>div:nth-child(2) .weatherIconContainer .iconImg img {
+    border-radius: 20px;
+}
+
+
+.container>div:nth-child(2) .mainDataContainer {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     font-weight: bold;
 }
-.container > div:nth-child(2) >div:nth-child(1){
+
+.container>div:nth-child(2) .mainDataContainer>div:nth-child(1) {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: white;
+}
+
+.container>div:nth-child(2) .mainDataContainer>div:nth-child(1)>span {
+    font-size: 4em;
+}
+
+.container>div:nth-child(2) .minMaxTempContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.container>div:nth-child(2) .minMaxTempContainer>span {
+    font-size: 1em;
+    align-items: center;
+    font-weight: normal;
+    color: white;
+    line-height: 10px;
+    display: flex;
+}
+.container>div:nth-child(2) .minMaxTempContainer>span>span {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+
+
+.container>div:nth-child(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    gap: 5px;
+    background: transparent;
+    background: linear-gradient(45deg, #4a5d78, #1f2c3c);
+    border-radius: 0 0 10px 10px;
+    border-top: 2px solid #172230;
+}
+.container>div:nth-child(3) >span{
     display: flex;
     align-items: center;
     gap: 5px;
 }
 
-.container > div:nth-child(2) div > span{
-    font-size: 4em;
-    font-weight: bold;
-}
+@media (max-width:404px) {
+    .container {
+        padding: 0;
+    }
 
-.container > div:nth-child(3){
-    display: flex;
-    /* justify-content: space-evenly; */
-    flex-direction: column;
-    align-items: center;
+    .container>div:nth-child(1) {
+        padding: 10px;
+    }
+    .container>div:nth-child(2) {
+        gap: .5em;
+    }
+    .container>div:nth-child(2) .weatherIconContainer .iconImg {
+        height: 90px;
+    }
 }

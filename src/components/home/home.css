@@ -1,33 +1,103 @@
-.main{
+.main {
     display: flex;
-    flex-direction: column;
     padding: 2em;
+    background-color: #0b121e;
+    gap: 2em;
     align-items: center;
-    gap: 1em;
-}
-.main > form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-.main > form > div:nth-child(1) input{
-    padding: 5px;
-    font-size: 1.5em;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid black;
+    border-radius: 10px;
 }
 
-.main > form button{
+.main>form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.main>form img {
+    width: 70px;
+    height: 70px;
+}
+
+.main form h1 {
+    color: white;
+    border-bottom: 2px solid white;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+.main>form>div:nth-child(3) input {
+    padding: 10px;
+    color: white;
+    background: linear-gradient(45deg, #4a5d78, #1f2c3c);
+    font-size: 1.5em;
+    border: none;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+
+.main>form>div:nth-child(3) input::placeholder {
+    color: white;
+}
+
+
+.main>form button {
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     background-color: blue;
     color: white;
+    cursor: pointer;
 }
-.main > div:nth-child(2) .noDataContainer{
-    margin-top: 2em;
-    font-size: 5em;
+
+.main div:nth-child(5) {
+    color: white;
+    align-self: flex-start;
+}
+
+.main div:nth-child(5) a {
+    text-decoration: none;
+    color: aqua;
+}
+
+.noDataContainer {
+    display: flex;
+    width: 20rem;
+    /* background-color: #304057; */
+    background: linear-gradient(45deg, #637794, #1f2c3c);
+    height: 20rem;
+    padding: 1em;
+    font-size: 2em;
     font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 10px;
+}
+
+@media (max-width:826px) {
+    .main {
+        flex-direction: column;
+        margin: 1em 0;
+    }
+}
+
+@media (max-width:480px) {
+    .main {
+        padding: 0;
+        background-color: transparent;
+    }
+}
+
+@media (max-width:404px) {
+    .main>form>div:nth-child(3) input {
+        padding: 8px;
+        font-size: 1.3em;
+    }
+    .noDataContainer {
+        padding: 0;
+    }
 }
